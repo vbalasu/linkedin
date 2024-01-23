@@ -6,7 +6,7 @@
     await page.setViewport({width: 1366, height: 768});
     await page.goto('https://www.linkedin.com/login', {waitUntil: 'networkidle2'});
     await page.click('#username');
-    await page.keyboard.type('vbalasu@gmail.com');
+    await page.keyboard.type(process.env.LINKEDIN_USERNAME || '');
     await page.click('#password');
     await page.keyboard.type(process.env.LINKEDIN_PASSWORD || '');
     await page.click('[type="submit"]');

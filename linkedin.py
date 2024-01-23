@@ -24,7 +24,7 @@ browser.get('https://www.linkedin.com/login')
 
 # Find username field and type the email
 username_field = browser.find_element(By.ID, 'username')
-username_field.send_keys('vbalasu@gmail.com')
+username_field.send_keys(os.getenv('LINKEDIN_USERNAME', ''))
 
 # Find password field and type the password
 password_field = browser.find_element(By.ID, 'password')
